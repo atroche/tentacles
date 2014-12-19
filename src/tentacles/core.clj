@@ -76,8 +76,8 @@
   [x] (= (:status x) 204))
 
 (defn format-url
-  "Creates a URL out of end-point and positional. Called URLEncoder/encode on
-   the elements of positional and then formats them in."
+  "Creates a URL out of end-point and positional. URL encodes the elements of
+   positional and then formats them in."
   [end-point positional]
   (str url (apply format end-point (map url/url-encode positional))))
 
